@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+
 strenght = {
     'race': {
         'Dragonborn':2,'Dwarf':0,'Elf':0,'Gnome':0,'Half-Elf':0,'Halfling':0,'Half-Orc':2,'Human':1,'Tiefling':0
@@ -67,7 +68,7 @@ def post_points():
     wisdom = request.json['wisdom']
     charisma = request.json['charisma']
 
-    points = points['strenght'][strenght], points['dexterity'][dexterity], points['constitution'][constitution], points['intelligence'][intelligence], points['wisdom'][wisdom], points['charisma'][charisma]
+    points = strenght['strenght'][strenght], dexterity['dexterity'][dexterity], constitution['constitution'][constitution], intelligence['intelligence'][intelligence], wisdom['wisdom'][wisdom], charisma['charisma'][charisma]
 
     return jsonify(points)
 

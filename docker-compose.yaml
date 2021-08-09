@@ -1,0 +1,26 @@
+services:
+
+  service-1:
+    container_name: "service1"
+    image: Practical-Project/service1
+    build: service_1
+    ports:
+    - target: 5000
+      published: 5000
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+
+  service-2:
+    container_name: "service2"
+    image: Practical-Project/service2
+    build: service_2/
+
+  service-3:
+    container_name: "service3"
+    image: Practical-Project/service3
+    build: service_3/
+
+  service-4:
+    container_name: "service4"
+    image: Practical-Project/service4
+    build: service_4/
