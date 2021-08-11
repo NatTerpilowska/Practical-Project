@@ -1,10 +1,10 @@
-from application import db
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:rooot@35.197.250.227/project2"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@34.142.41.159/project2"
 
 db = SQLAlchemy(app)
 db.drop_all()

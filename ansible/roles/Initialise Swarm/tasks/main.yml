@@ -8,4 +8,4 @@
 
 - name: Debug swarm
   debug:
-   msg: "{{ swarm_info }}"  
+    msg: "{{ swarm_info }}"

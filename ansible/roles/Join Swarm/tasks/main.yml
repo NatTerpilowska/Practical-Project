@@ -1,7 +1,7 @@
 ---
 # tasks file for Join Swarm
 
-- name: Join swarm
+- name: Join Swarm
   docker_swarm:
     state: join
     advertise_addr: "ansible_hostname"
