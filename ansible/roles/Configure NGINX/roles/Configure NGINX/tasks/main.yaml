@@ -1,0 +1,6 @@
+# tasks file for configure NGINX
+
+- name: Install NGINX
+  apt:
+    name: nginx
+    update_cache: true
