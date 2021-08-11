@@ -1,0 +1,9 @@
+---
+# tasks file for Stack Deploy
+
+- name: deploy from stack
+  docker_stack:
+    state: present
+    name: app-stack
+    compose:
+     - ~/Practical-Project/docker-compose.yaml
