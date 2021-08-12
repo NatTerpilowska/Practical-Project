@@ -6,6 +6,7 @@
     name:
      - apt-transport-https
      - ca-certificates
+     - python3-jsondiff
      - curl
      - gnupg
      - lsb-release

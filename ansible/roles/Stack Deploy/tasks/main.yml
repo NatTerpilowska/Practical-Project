@@ -6,4 +6,4 @@
     state: present
     name: app-stack
     compose:
-     - ~/Practical-Project/docker-compose.yaml
+     - ~/Project/Practical-Project/docker-compose.yaml
