@@ -1,10 +1,11 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from os import getenv
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@34.142.41.159/project2"
+app.config.update(
+    SQLALCHEMY_DATABASE_URI=getenv("DATABASE_URI")
 
 db = SQLAlchemy(app)
 db.drop_all()
