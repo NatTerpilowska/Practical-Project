@@ -9,4 +9,4 @@ app.config.update(
 
 db = SQLAlchemy(app)
 db.drop_all()
-db.create_all()
+db.create_all()  
