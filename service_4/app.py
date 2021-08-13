@@ -25,7 +25,6 @@ dexterity = {
 
 constitution = {
     'race': {
-        '': ,
         'Dragonborn':0,'Dwarf':2,'Elf':0,'Gnome':0,'Half-Elf':0,'Halfling':0,'Half-Orc':1,'Human':1,'Tiefling':0
     },
     'clas': {
@@ -35,7 +34,6 @@ constitution = {
 
 intelligence = {
     'race': {
-        '': ,
         'Dragonborn':0,'Dwarf':0,'Elf':0,'Gnome':2,'Half-Elf':0,'Halfling':0,'Half-Orc':0,'Human':1,'Tiefling':1
     },
     'clas': {
