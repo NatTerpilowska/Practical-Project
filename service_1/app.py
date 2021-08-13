@@ -1,5 +1,5 @@
+from app/models import Characters
 from flask import Flask
-import requests
 
 app = Flask(__name__)
 
