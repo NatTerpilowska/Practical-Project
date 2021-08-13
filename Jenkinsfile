@@ -8,7 +8,6 @@ pipeline{
         stage('Install Dependencies'){
             steps{
                 sh "bash scripts/setup.sh"
-
             }
         }
     
