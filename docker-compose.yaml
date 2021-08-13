@@ -1,8 +1,9 @@
+version: "3.7"
 services:
   service_1:
     container_name: "service_1"
     image: natterpilowska/service_1
-    build: service-1
+    build: service_1
     ports:
     - target: 5000
       published: 5000

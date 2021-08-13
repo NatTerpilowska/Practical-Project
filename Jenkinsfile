@@ -8,14 +8,9 @@ pipeline{
         stage('Install Dependencies'){
             steps{
                 sh "bash scripts/setup.sh"
-
             }
         }
-        stage('Test App'){
-            steps{
-                sh "bash scripts/test.sh"
-            }
-        }
+    
         stage('Build Images'){
             steps{
                 sh "bash scripts/build.sh"
@@ -28,8 +23,8 @@ pipeline{
         }
         stage('Deploy Stack'){
             steps{
-                "bash scripts/deploy.sh"
+                sh "bash scripts/deploy.sh"
             }
         }
     }
-}
+} 
