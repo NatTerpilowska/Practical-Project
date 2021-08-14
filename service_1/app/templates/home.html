@@ -1,23 +1,9 @@
-<body>
-    
-    <h1>D&D character generator
-    </h1>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css">
-    <img src="https://media.tenor.com/images/14bddde4965b9cd21a5d3149fd9392b1/tenor.gif" alt="centered image" />
-
-
-    <h2>
-    {% block title %}
-    {% endblock title %}
-    </h2>
-
-    <div class="navbar">
-        <a href="{{ url_for('home') }}">Home</a>
-    </div>
-
-    <br>
-    
-    {% block body %}
-    {% endblock body %}
+<html>
+    <body style='background-color:rgb(35, 59, 110)'>
+<center>
+    <h1>Generate your character here.</h1>
+</center>
+{% block body %}
+{% endblock body %}
 </body>
+</html>
