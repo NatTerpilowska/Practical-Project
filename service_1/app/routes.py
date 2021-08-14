@@ -12,9 +12,9 @@ def home():
     data = {"race":race, "clas":clas}
     points = requests.post('http://service_4:5000/post/points', data)
 
-    records = Character.query.order_by(Character.id.desc()).limit(15).all()
+    records = Characters.query.order_by(Characters.id.desc()).limit(15).all()
 
-    outcome = Character(race=race, clas=clas, points=points)
+    outcome = Characters(race=race, clas=clas, points=points)
     db.session.add(outcome)
     db.session.commit()
 
