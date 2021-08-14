@@ -7,3 +7,4 @@ class Characters(db.Model):
     points = db.Column(db.Integer)
 
 db.create_all()
+
