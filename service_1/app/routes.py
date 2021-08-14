@@ -6,11 +6,11 @@ from app.models import Characters
 
 @app.route('/', methods=['GET','POST'])
 def home():
-    race = requests.get('http://service_2:5000/get/race').text
-    clas = requests.get('http://service_3:5000/get/class').text
+    race = requests.get('http://character_service_2:5000/get/race').text
+    clas = requests.get('http://character_service_3:5000/get/class').text
 
     data = {"race":race, "clas":clas}
-    points = requests.post('http://service_4:5000/post/points', data)
+    points = requests.post('http://character_service_4:5000/post/points', data)
 
     records = Characters.query.order_by(Characters.id.desc()).limit(15).all()
 
