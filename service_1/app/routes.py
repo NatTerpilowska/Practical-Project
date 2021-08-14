@@ -7,7 +7,7 @@ from app.models import Characters
 @app.route('/', methods=['GET','POST'])
 def home():
     race = requests.get('http://character_service_2:5000/get/race').text
-    clas = requests.get('http://character_service_3:5000/get/class').text
+    clas = requests.get('http://character_service_3:5000/get/clas').text
 
     data = {"race":race, "clas":clas}
     points = requests.post('http://character_service_4:5000/post/points', data)
