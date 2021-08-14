@@ -8,6 +8,6 @@ clas = ['Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger',
 @app.route('/get/clas')
 def get_class():
     return random.choice(clas)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0')
