@@ -7,8 +7,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    return "welcome"
 
-    return render_template("home.html")
+@app.errorhandler(404)
+def invalid_route(e)
+    return "invalid route"
 
 
 #@app.route('/get')
