@@ -6,7 +6,7 @@ from app.models import Characters
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def home():
     race = requests.get('http://service_2:5000/get/race').text
     clas = requests.get('http://service_3:5000/get/class').text
 
@@ -20,4 +20,4 @@ def index():
     db.session.add(points)
     db.session.commit()
 
-    return render_template("index.html", points=points, records=records)
+    return render_template("home.html", points=points, records=records)
