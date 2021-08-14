@@ -7,7 +7,7 @@ race = ['Dragonborn','Dwarf','Elf','Gnome','Half-Elf','Halfling','Half-Orc','Hum
 
 @app.route('/get/race')
 def get_race():
-    return jsonify(random.choice(race))
+    return (random.choice(race)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
