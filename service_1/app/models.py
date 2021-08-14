@@ -5,3 +5,5 @@ class Characters(db.Model):
     race = db.Column(db.String(100))
     clas = db.Column(db.String(100))
     points = db.Column(db.Integer)
+    
+db.create_all()
