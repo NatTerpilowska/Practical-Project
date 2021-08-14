@@ -9,8 +9,8 @@ def home():
     race = requests.get('http://service_2:5000/get/race').text
     clas = requests.get('http://service_3:5000/get/class').text
 
-    data = {'race': race, 'clas': clas}
-    points = requests.post('http://service_4:5000/post/points', json=data).json()
+    data = [race, clas]
+    points = requests.post('http://service_4:5000/post/points', data)
 
     records = Character.query.order_by(Character.id.desc()).limit(15).all()
 
