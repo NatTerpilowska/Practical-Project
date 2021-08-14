@@ -6,8 +6,8 @@ from app.models import Characters
 
 @app.route("/")
 def home():
-   race = requests.get('http://service_2:5000/get/race').text
-   clas = requests.get('http://service_3:5000/get/class').text
+   race = [requests.get('http://service_2:5000/get/race').text]
+   clas = [requests.get('http://service_3:5000/get/class').text]
 
    payload = {'race': race, 'clas': clas}
    points = requests.post('http://service_4:5000/post/points', json=payload).json()
