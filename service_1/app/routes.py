@@ -10,7 +10,7 @@ def home():
     return "welcome"
 
 @app.errorhandler(404)
-def invalid_route(e)
+def invalid_route():
     return "invalid route"
 
 
