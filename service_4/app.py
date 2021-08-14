@@ -59,14 +59,14 @@ charisma = {
 }
 @app.route('/post/points', methods=['POST'])
 def post_points():
-    strenght = request.json['strenght']
-    dexterity = request.json['dexterity']
-    constitution = request.json['constitution']
-    intelligence = request.json['intelligence']
-    wisdom = request.json['wisdom']
-    charisma = request.json['charisma']
+    stre = request.json['strenght']
+    dext = request.json['dexterity']
+    cons = request.json['constitution']
+    inte = request.json['intelligence']
+    wisd = request.json['wisdom']
+    char = request.json['charisma']
 
-    points = strenght['strenght'][strenght], dexterity['dexterity'][dexterity], constitution['constitution'][constitution], intelligence['intelligence'][intelligence], wisdom['wisdom'][wisdom], charisma['charisma'][charisma]
+    points = strenght['strenght'][stre], dexterity['dexterity'][dext], constitution['constitution'][cons], intelligence['intelligence'][inte], wisdom['wisdom'][wisd], charisma['charisma'][char]
 
     return jsonify(points)
 
