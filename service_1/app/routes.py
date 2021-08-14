@@ -1,17 +1,12 @@
 from flask import Flask, request, jsonify, render_template
 import requests
-from . import app, db
+from app import app, db
 from app.models import Characters
  
-app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "welcome"
-
-@app.errorhandler(404)
-def invalid_route(e)
-    return "invalid route"
+    return render_template('home.html')
 
 
 #@app.route('/get')
