@@ -7,7 +7,7 @@ clas = ['Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger',
 
 @app.route('/get/clas')
 def get_clas():
-    return (random.choice(clas))
+    return random.choice(clas)
     
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
