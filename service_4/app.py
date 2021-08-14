@@ -14,10 +14,10 @@ points = {
 
 @app.route('/post/points', methods=['POST'])
 def post_points():
-    stre = request.json['strenght']
+    strenght = request.json['strenght']
    
 
-    points = strenght['strenght'][stre]
+    points = strenght
     return jsonify(points)
 
 if __name__ == '__main__':
