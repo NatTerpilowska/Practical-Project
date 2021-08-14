@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import requests
 from . import app, db
 from app.models import Characters
-
+ 
 app = Flask(__name__)
 
 @app.route('/')
