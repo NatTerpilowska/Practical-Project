@@ -1,23 +1,21 @@
 from flask import Flask, request, jsonify, render_template
 import requests
-from . import app, db
+from app import app, db
 from app.models import Characters
- 
-app = Flask(__name__)
 
-@app.route('/')
-def index():
-    race = requests.get('http://service_2:5000/get/race').text
-    clas = requests.get('http://service_3:5000/get/class').text
 
-    payload = {'race': race, 'clas': clas}
-    points = requests.post('http://service_4:5000/post/points', json=payload).json()
-    
-    records = Character.query.order_by(Character.id.desc()).limit(5).all()
+@app.route('/', methods=['GET','POST'])
+def home():
+    race = requests.get('http://service_2:5000/get/race').json()
+    clas = requests.get('http://service_3:5000/get/class').json()
 
-    
-    characters = Character(race=race, clas=clas, points=points)
-    db.session.add(points)
+    data = [race, clas]
+    points = requests.post('http://service_4:5000/post/points', json=data).json()
+
+    records = Character.query.order_by(Character.id.desc()).limit(15).all()
+
+    outcome = Character(race=race, clas=clas, points=points)
+    db.session.add(outcome)
     db.session.commit()
 
-    return render_template("index.html", points=points, records=records)
+    return render_template('home.html', points=points, records=records)
