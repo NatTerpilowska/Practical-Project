@@ -12,5 +12,6 @@ def points():
             "Druid": "aaa"
         }
      }
- info = request.json 
+
+info = request.json 
 return Response(points[info["character_race"]][info["character_clas"]], mimetype='text/plain')
