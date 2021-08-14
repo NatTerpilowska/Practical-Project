@@ -1,7 +1,7 @@
-from flask import Flask
+from flask import Flask, request, jsonify, render_template
 import requests
 from . import app, db
-from .models import Character
+from app.models import Characters
 
 app = Flask(__name__)
 
