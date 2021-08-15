@@ -11,7 +11,7 @@ pointss = {
     },
     'clas': {
         'Barbarian': 2,
-        'Dwarf': 2,
+        'Bard': 2,
         'Cleric': 2
     }
 }
