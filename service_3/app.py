@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 
-clas = ['Barbarian', 'Bard', 'Cleric']
+clas = ['Paladin', 'Wizard', 'Rogue']
 @app.route('/get/clas')
 def get_clas():
     return random.choice(clas)
