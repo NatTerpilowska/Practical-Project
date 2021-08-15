@@ -13,9 +13,9 @@ class TestResponse(TestBase):
     def test_home(self):
 
         with mock() as m:
-            m.get('http://service_2:5000/get/race', text='Human')
-            m.get('http://service_3:5000/get/clas', text='Paladin')
-            m.post('http://service_4:5000/post/points', json=12)
+            m.get('http://service_2:5000/get/race', text='Hobgoblin')
+            m.get('http://service_3:5000/get/clas', text='Cleric')
+            m.post('http://service_4:5000/post/points', json=11)
 
             response = self.client.get(url_for('home'))
 

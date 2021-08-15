@@ -5,14 +5,14 @@ app = Flask(__name__)
 
 pointss = {
     'race': {
-        'Halfling': 2,
-        'Human': 5,
-        'Orc' : 1
+        'Elf': 2,
+        'Dragonborn': 5,
+        'Hobgoblin' : 1
     },
     'clas': {
-        'Paladin': 7,
-        'Wizard': 10,
-        'Rogue': 10
+        'Bard': 7,
+        'Sorcerer': 10,
+        'Cleric': 10
     }
 }
 @app.route('/post/points', methods=['POST'])
