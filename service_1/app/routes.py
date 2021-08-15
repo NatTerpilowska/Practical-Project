@@ -18,4 +18,4 @@ def home():
     db.session.add(outcome)
     db.session.commit()
 
-    return render_template('home.html', outcome=outcome, records=records)
+    return render_template('home.html', outcome=outcome, race=race, clas=clas records=records)
