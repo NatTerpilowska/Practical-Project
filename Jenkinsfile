@@ -1,4 +1,5 @@
   
+  
 pipeline{
     agent any
     environment{
@@ -12,7 +13,6 @@ pipeline{
             }
         }
     stage('Test Applications'){     
-      stage('Test'){
          steps{
                sh "bash scripts/test.sh"
             }
