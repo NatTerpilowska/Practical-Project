@@ -21,6 +21,12 @@ pipeline{
                 sh "bash scripts/config.sh"
             }
         }
+        
+        stage('Test'){
+            steps{
+                sh "bash scripts/test.sh"
+            }
+        }
 
         stage('Deploy Stack'){
             steps{
