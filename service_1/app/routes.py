@@ -17,6 +17,7 @@ def home():
     outcome = Characters(race=race, clas=clas, points=points)
     db.session.add(outcome)
     db.session.commit()
+    history = Characters.query.all()
 
-    return render_template('home.html', outcome=outcome, race=race, clas=clas, points=points, records=records)
+    return render_template('home.html', outcome=outcome, race=race, clas=clas, points=points, records=records, history=history)
 
