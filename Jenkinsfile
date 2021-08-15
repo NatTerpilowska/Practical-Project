@@ -12,7 +12,6 @@ pipeline{
             }
         }
     stage('Test Applications'){     
-      stage('Test'){
          steps{
                sh "bash scripts/test.sh"
             }
