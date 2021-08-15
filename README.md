@@ -75,3 +75,6 @@ I've used HTML and a CSS bootstrap to display the returned outcome of my applica
 * I would really like my application to generate factual points as per D&D book for base points of every class.
 * I would also like my application to display previously generated characters.
 * Improving the tests to include Integration testing.
+
+# Acknowledgements
+I would like to say thank you to the amazing Oliver Nichols and Ryan Wright for guiding me through this project as well as every single person from my class.
