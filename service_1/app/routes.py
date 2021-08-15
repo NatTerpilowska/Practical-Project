@@ -19,3 +19,4 @@ def home():
     db.session.commit()
 
     return render_template('home.html', outcome=outcome, race=race, clas=clas, points=points, records=records)
+
