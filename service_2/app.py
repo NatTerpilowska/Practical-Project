@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 
-race = ['Dragonborn','Dwarf','Elf','Gnome','Half-Elf','Halfling','Half-Orc','Human','Tiefling']
+race = ['Dragonborn','Dwarf','Elf']
 
 @app.route('/get/race')
 def get_race():
