@@ -53,3 +53,24 @@ I've used a simple model of a single table database and described the exact stru
 
 # Interactions
 ![](https://i.imgur.com/88EDeGm.png)
+I've orchestrated a network of virtual machines using docker swarm that are all able to communicate with each other.
+The list of virtual machiens:
+* Load Balancer
+* Manager
+* Worker
+I've also had a Jenkins VM that was communicating with my Github using a webhook and a Development VM where I've made all the pushes from therefore sending my code to Jenkins and triggering a build.
+
+# Refactoring
+I refactored my testing by using the Cobertura Plugin via Jenkins to show me my exact coverage and some extra information that speeded up making sure that the tests are effecient in all areas.
+
+## Application
+# Front-End
+When navigating to the load balancer IP on port 80, your character will be generated as mentioned above.
+I've used HTML and a CSS bootstrap to display the returned outcome of my applications together.
+![](https://i.imgur.com/8SnSkZz.png)
+
+
+## Future Improvements
+* I would really like my application to generate factual points as per D&D book for base points of every class.
+* I would also like my application to display previously generated characters.
+* Improving the tests to include Integration testing.
