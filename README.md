@@ -22,7 +22,7 @@ I've decided to develop a simple D&D Character Generator application which gener
 ## Architecture
 # Risk Assessment
 The risk assessment below highlights the potential risks that would prevent me from completing the project. I find it extremely important to have a plan when dealing with difficult situations and luckily - none of the risks were something I've been dealing with by the end of the project. I always like to think about the technical risks as well as enviromental ones.
-![](https://i.imgur.com/J3qj9yQ.png)
+![](https://i.imgur.com/Z5mACZW.png)
 
 # Planning Board (Trello)
 Can be seen here: https://trello.com/b/A7OrSxv2/project2
