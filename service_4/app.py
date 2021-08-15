@@ -5,13 +5,13 @@ app = Flask(__name__)
 
 pointss = {
     'race': {
-        'Dragonborn': 1,
-        'Dwarf': 1,
-        'Elf' : 1
+        'Dragonborn': 3,
+        'Dwarf': 4,
+        'Elf' : 7
     },
     'clas': {
-        'Barbarian': 2,
-        'Bard': 2,
+        'Barbarian': 4,
+        'Bard': 5,
         'Cleric': 2
     }
 }
