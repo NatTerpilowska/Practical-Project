@@ -8,8 +8,8 @@ from app.models import Characters
 def home():
     race = requests.get('http://service_2:5000/get/race').text
     clas = requests.get('http://service_3:5000/get/clas').text
-
-    points = requests.get('http://service_4:5000/get/points').text
+    data = [race, clas]
+    points = requests.post('http://service_4:5000/get/points', data).text
 
     records = Characters.query.order_by(Characters.id.desc()).limit(15).all()
 
