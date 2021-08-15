@@ -1,7 +1,7 @@
-from flask import Flask, request, jsonify, render_template
-import requests
 from app import app, db
 from app.models import Characters
+from flask import Flask, json, request, jsonify, render_template
+import requests
 
 
 @app.route('/')
