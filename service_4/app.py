@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 points = ['one', 'two']
 
-@app.route('/get/points')
-def get_points():
+@app.route('/post/points', methods=['POST'])
+def post_points():
     return random.choice(points)
     
 if __name__ == "__main__":
