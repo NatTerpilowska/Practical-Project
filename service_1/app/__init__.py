@@ -5,8 +5,12 @@ from os import getenv
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI=os.getenv("DATABASE_URI")
+app.config.update(
+    SQLALCHEMY_DATABASE_URI =getenv("DATABASE_URI"),
+    SQLALCHEMY_TRACK_MODIFICATIONS=True,
+    SECRET_KEY=str(os.urandom(16))
+)
 
 db = SQLAlchemy(app)
 
-from app import routes
+from . import routes
