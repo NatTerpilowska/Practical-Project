@@ -9,7 +9,7 @@ def home():
     race = requests.get('http://service_2:5000/get/race').text
     clas = requests.get('http://service_3:5000/get/clas').text
 
-    points = requests.post('http://service_4:5000/get/points'.text)
+    points = requests.get('http://service_4:5000/get/points').text
 
     records = Characters.query.order_by(Characters.id.desc()).limit(15).all()
 
