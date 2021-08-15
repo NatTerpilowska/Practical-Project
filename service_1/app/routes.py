@@ -4,12 +4,13 @@ from app import app, db
 from app.models import Characters
 
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/')
 def home():
     race = requests.get('http://service_2:5000/get/race').text
     clas = requests.get('http://service_3:5000/get/clas').text
-    data = [race, clas]
-    points = requests.post('http://service_4:5000/get/points', data).text
+    
+    payload = {'race': race, 'clas': clas}
+    points = requests.post('http://service_4:5000/post/points', json=payload).json()
 
     records = Characters.query.order_by(Characters.id.desc()).limit(15).all()
 
