@@ -10,7 +10,13 @@ pipeline{
                 sh "bash scripts/setup.sh"
             }
         }
-    
+            
+     stage('Test'){
+         steps{
+                sh "bash scripts/test.sh"
+            }
+        }
+        
         stage('Build Images'){
             steps{
                 sh "bash scripts/build.sh"
@@ -19,12 +25,6 @@ pipeline{
         stage('Configure VMs'){
             steps{
                 sh "bash scripts/config.sh"
-            }
-        }
-        
-        stage('Test'){
-            steps{
-                sh "bash scripts/test.sh"
             }
         }
 
