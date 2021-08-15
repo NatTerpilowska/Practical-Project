@@ -1,17 +1,13 @@
-from flask import Flask, request, jsonify
+from flask import Flask
+import random
 
 app = Flask(__name__)
 
-@app.route('/post/points', methods=['POST'])
-def points():
-     points = {
-        "Dragonborn" : {
-            "Barbarian" : "aa", 
-            "Bard" : "aa"
-            "Cleric" : "aa", 
-            "Druid": "aaa"
-        }
-     }
+points = ['one', 'two']
 
-info = request.json 
-return Response(points[info["character_race"]][info["character_clas"]], mimetype='text/plain')
+@app.route('/get/points')
+def get_points():
+    return random.choice(points)
+    
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0')
