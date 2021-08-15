@@ -67,7 +67,8 @@ I refactored my testing by using the Cobertura Plugin via Jenkins to show me my 
 # Front-End
 When navigating to the load balancer IP on port 80, your character will be generated as mentioned above.
 I've used HTML and a CSS bootstrap to display the returned outcome of my applications together.
-![](https://i.imgur.com/8SnSkZz.png)
+
+* ![](https://i.imgur.com/8SnSkZz.png)
 
 
 ## Future Improvements
