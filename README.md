@@ -38,6 +38,7 @@ The rest tests whether correct things have been generated and the status codes o
 
 * Jenkins
 I've used Jenkins to automate my deployment and therefore reduce the time it takes from development to actually deploying the application. Whenever a push is made to my Dev branch on github, Jenkins runs the whole job for me and quickly updates the page of my application using a webhook.
+![](https://i.imgur.com/slTy4eY.png)
 
 The Jenkins pipeline is as follows:
 * Installing Dependencies.
@@ -65,6 +66,7 @@ I've also had a Jenkins VM that was communicating with my Github using a webhook
 I refactored my testing by using the Cobertura Plugin via Jenkins to show me my exact coverage and some extra information that speeded up making sure that the tests are effecient in all areas.
 
 ## Application
+
 # Front-End
 When navigating to the load balancer IP on port 80, your character will be generated as mentioned above.
 I've used HTML and a CSS bootstrap to display the returned outcome of my applications together.
@@ -72,7 +74,7 @@ I've used HTML and a CSS bootstrap to display the returned outcome of my applica
 * ![](https://i.imgur.com/8SnSkZz.png)
 
 
-## Future Improvements
+# Future Improvements
 * I would really like my application to generate factual points as per D&D book for base points of every class.
 * I would also like my application to display previously generated characters.
 * Improving the tests to include Integration testing.
