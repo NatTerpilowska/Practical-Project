@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Unit Testing
-python3 -m pytest --ignore-glob=service_1/tests/test_1.py --cov --cov-config=.coveragerc
-python3 -m pytest --ignore-glob=service_2/tests/test_2.py --cov --cov-config=.coveragerc
-python3 -m pytest --ignore-glob=service_3/tests/test_3.py --cov --cov-config=.coveragerc
-python3 -m pytest --ignore-glob=service_4/tests/test_4.py --cov --cov-config=.coveragerc
+
+sudo apt-get install python3-venv -y
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip3 install -r requirements.txt
+python3 -m pytest --cov --cov-config=.coveragerc --cov-report term-missing --cov-report xml:coverage.xml --junitxml junit.xml
