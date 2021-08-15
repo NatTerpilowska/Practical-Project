@@ -6,7 +6,7 @@ pointss = {
         'Dragonborn': 1,
         'Dwarf': 1,
         'Elf' : 1
-    }
+    },
     'clas': {
         'Barbarian': 2,
         'Dwarf': 2,
