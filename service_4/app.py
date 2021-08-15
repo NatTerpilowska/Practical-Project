@@ -1,6 +1,8 @@
 from flask import Flask
 import random
 
+app = Flask(__name__)
+
 pointss = {
     'race': {
         'Dragonborn': 1,
