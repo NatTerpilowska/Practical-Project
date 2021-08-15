@@ -20,3 +20,4 @@ def home():
     history = Characters.query.all()
 
     return render_template('home.html', outcome=outcome, race=race, clas=clas, points=points, records=records, history=history)
+
