@@ -1,3 +1,4 @@
+  
 pipeline{
     agent any
     environment{
@@ -10,7 +11,12 @@ pipeline{
                 sh "bash scripts/setup.sh"
             }
         }
-    
+    stage('Test Applications'){     
+      stage('Test'){
+         steps{
+               sh "bash scripts/test.sh"
+            }
+        }
         stage('Build Images'){
             steps{
                 sh "bash scripts/build.sh"
@@ -21,7 +27,6 @@ pipeline{
                 sh "bash scripts/config.sh"
             }
         }
-   
         stage('Deploy Stack'){
             steps{
                 sh "bash scripts/deploy.sh"
