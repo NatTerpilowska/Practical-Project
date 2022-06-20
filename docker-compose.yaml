@@ -26,3 +26,4 @@ services:
     image: natterpilowska/service_4
     build: service_4/
    
+ 
